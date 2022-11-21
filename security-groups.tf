@@ -26,6 +26,7 @@ resource "aws_security_group" "allow-tcp" {
 
 resource "aws_security_group" "egress-all" {
     name = "egress-all-sg"
+    vpc_id = aws_vpc.main.id
     egress {
         from_port = 0
         to_port = 0
